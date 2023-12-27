@@ -1,0 +1,16 @@
+# Service Account Key authentication method
+# See Authentication methods below for more config options
+data_source covid:
+  type: bigquery
+  account_info_json_path: /usr/local/airflow/include/gcp/service_account.json
+  auth_scopes:
+  - https://www.googleapis.com/auth/bigquery
+  - https://www.googleapis.com/auth/cloud-platform
+  - https://www.googleapis.com/auth/drive
+  project_id: 'airflow-project-aditya-405904'
+  dataset: covid
+
+soda_cloud:
+  host: cloud.soda.io
+  api_key_id: 0a7ae793-c588-4310-9c3c-061b752c11d1
+  api_key_secret: BBvefe-i6sZ8GPqflI3gWGVLPaTOc1gdfz5FLR7CZS-R6t3kcIq7dg

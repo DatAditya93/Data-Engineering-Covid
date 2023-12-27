@@ -1,0 +1,38 @@
+checks for raw_covid:
+  - schema:
+      fail:
+        when required column missing: [cov_id, region_code, region, episode_week, episode_week_group, episode_year_code, 
+        episode_year, gender_code, gender, age_group_code, age_group, occupation_code, occupation, asymptomatic_code, 
+        asymptomatic, onset_week_symptomp, onset_year_code, onset_year, hospital_status_code, hospital_status, resolved_code, 
+        resolved, resolution_week, resolution_year_code, resolution_year, death_code,transmission_code, death_status,
+        transmission_status]
+        when wrong column type:
+          cov_id: integer
+          region_code: integer
+          region: string
+          episode_week: integer
+          episode_week_group: integer
+          episode_year_code: integer
+          episode_year: integer
+          gender_code: integer
+          gender: string
+          age_group_code: integer
+          age_group: string
+          occupation_code: integer
+          occupation: string
+          asymptomatic_code: integer
+          asymptomatic: string
+          onset_week_symptomp: integer
+          onset_year_code: integer
+          onset_year: integer
+          hospital_status_code: integer
+          hospital_status: string
+          resolved_code: integer
+          resolved: string
+          resolution_week: integer
+          resolution_year_code: integer
+          resolution_year: integer
+          death_code: integer
+          transmission_code: integer
+          death_status: string
+          transmission_status: string

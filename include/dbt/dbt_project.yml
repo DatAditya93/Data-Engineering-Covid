@@ -1,0 +1,7 @@
+name: 'covid'
+
+profile: 'covid'
+
+models:
+  retail:
+    materialized: table

@@ -47,9 +47,18 @@ def covid():
             conn_id= 'gcp',
             metadata=Metadata(schema='covid')
         ),
-        use_native_support=True
+        use_native_support=True)
 
-    )
+    @task.external_python(python='/usr/local/airflow/soda_venv/bin/python') #location of soda venv
+    def check_load(scan_name='check_load', checks_subpath='sources'):
+        from include.soda.check_function import check
+
+        return check(scan_name,checks_subpath)
+    
+    check_load()
+         
+
+    
 
 
 covid()

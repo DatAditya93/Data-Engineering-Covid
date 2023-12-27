@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: covid
+    database: airflow-project-aditya-405904 # Put the project id!
+
+    tables:
+      - name: raw_covid
